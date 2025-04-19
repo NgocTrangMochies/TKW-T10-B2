@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Nhập năm: </h2>
+    <input type="Number" id="nam" step="1" min="100" max="3000">
+    <button onclick="tracuu()">Tra cứu</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function tracuu(){
+            let nam=parseFloat(document.getElementById("nam").value);
+            let ketqua="";
+
+            if ((nam%4===0 && nam%100!==0) || (nam%400===0)){
+                ketqua= "Năm "+ nam + " là năm nhuận.";
+            }else {
+                ketqua= "Năm "+ nam + " là năm không nhuận.";
+            }
+            document.getElementById("ketqua").innerText=ketqua;
+        }
+    </script>
+</body>
+</html>
